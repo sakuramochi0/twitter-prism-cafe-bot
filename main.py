@@ -27,5 +27,5 @@ crop.save(tmp_path)
 # tweet image
 now = datetime.datetime.now()
 date = '{t.month}/{t.day}({week}) {t.hour}:{t.minute:02d}'.format(t=now, week='月火水木金土日'[now.weekday()])
-status = '{}現在の空席状況です♪'.format(date)
+status = '{}現在の空席状況です♪\n予約はこちらからどうぞ↓\nhttp://cafereserve.animate.co.jp/store?fair_id=129'.format(date)
 api.update_with_media(tmp_path, status=status)
