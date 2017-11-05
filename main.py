@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import argparse
 import datetime
 import io
@@ -27,7 +28,6 @@ def tweet(status, img_path=None):
 def tweet_for_date(date, url):
     '''週ごとの予約ページを開き、スクリーンショット付きツイートをする'''
     br.get(url)
-    print(url)
 
     # ウィンドウを表示を調整する
     br.set_window_size(1024, 1500)
