@@ -60,8 +60,10 @@ def main():
         date = tr.select('th')[0].text.replace('\n', '')
         btn = tr.select('.btn')[0]
 
+        if btn.text == '終了':
+            continue
         # 満席の場合 "close" が含まれる
-        if 'close' in btn['class']:
+        elif 'close' in btn['class']:
             status = '現在「{date}」\nの予約は満席です！\n#プリリズカフェ [{now}時点]'.format(
                 date=date,
                 now=get_now_string())
